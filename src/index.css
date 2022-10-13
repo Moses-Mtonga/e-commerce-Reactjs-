@@ -1,3 +1,8 @@
+@keyframes spinning {
+  from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,262 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(255, 255, 255);
+  position: relative;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 95%;
+  padding: 10px;
+  clear: both;
+}
+
+.item-container{
+  width: 180px;
+  height: 290px;
+  padding: 20px 15px 0 15px;
+  text-align: center;
+  margin: 20px;
+  border: 1px solid rgb(228, 228, 112);
+  border-radius: 15px;
+  background-color: rgb(248, 242, 238);
+}
+
+.image{
+  /* width: 90%;
+  height: 70%; */
+  width: 90%;
+  height: 70%;
+  
+  /* position: relative; */
+  transition: transform .3s;
+ 
+}
+.image:hover{
+  transform: scale(1.2);
+  /* border: 1px solid rgb(228, 228, 112);
+  border-radius: 15px; */
+}
+
+.header{
+  background-image:url('/phonegraffic.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  
+
+  background-color: #ffb246;
+  /* width: 100%; */
+  text-align: left;
+  padding: 5px;
+  
+  /* margin-left: 10px;
+  margin-right: 10px; */
+  font-weight: bold;
+  /* position: relative; */
+  /* border: 1px solid rgb(255, 0, 0); */
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.header img{
+position: absolute;
+border-radius: 50%;
+/* float: left; */
+width: 190px;
+height:190px;
+border: 3px solid rgb(240, 134, 64);
+margin-left: 20px;
+animation-name: spinning;
+animation-duration: 20s;
+animation-iteration-count: infinite;
+/* linear | ease | ease-in | ease-out | ease-in-out */
+animation-timing-function: linear;
+}
+
+.welcome{
+  color: rgb(253, 246, 138);
+  font-size: 40px;
+  clear: both;
+  padding-left: 40%;
+}
+
+.store{
+  color: rgb(53, 68, 133);
+  font-size: 30px;
+  font-weight: lighter;
+  background-color: rgb(235, 228, 137);
+  border-radius: 2px;
+ 
+  
+
+}
+.online{
+  font-size: larger;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  padding-left: 30%;
+ 
+}
+
+.App {
+  text-align: center;
+  position: relative;
+
+}
+
+:link{
+  text-decoration: none;
+}
+
+.detailbody{
+  background-color: rgb(255, 255, 255);
+}
+
+.detailcontainer{
+  /* border: 1px solid lightgray; */
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 60px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.detailright{
+  border: 1px solid lightgray;
+  border-radius: 25px;
+  margin: 10px 20px 10px 40px;
+  padding: 5% 10px 10px 10px;
+  position: relative;
+  text-align: left;
+  width: 40%;
+  font-size: large;
+  background-color:rgb(253, 245, 231);
+}
+.detailimage{
+  width: 40%;
+  height: auto;
+  
+}
+.detailleft{
+  /* border: 1px solid lightgray;
+  border-radius: 25px; */
+  padding-top:25px;
+  padding-left: 0px;
+  width: 50%;
+}
+
+.homefonts{
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: rgb(63, 62, 0);
+}
+
+.price{
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 40px;
+  width: 130px;
+  margin: auto;
+  font-weight: lighter;
+  text-align: center;
+  color: rgb(253, 57, 8);
+  
+}
+
+.currency{
+  float: right;
+  font-size: 25px;
+  margin-right: 30px;
+  border-bottom: 1px solid yellow ;
+  
+}
+.select{
+  border-radius: 5px;
+  width: fit-content;
+  margin: 10px;
+  background-color: rgb(242, 247, 246);
+}
+
+.footer {
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(245, 245, 245);
+  border-top: 1px solid lightgray;
+  color: gray;
+  position: relative;
+  height: 100%;
+  margin-top: 0px;
+}
+
+.detailhead{
+background-color: rgba(6,0,46,255);
+padding: 10px;
+height: 160px;
+position: relative;
+}
+
+.detailhead img{
+  height: 100%;
+  float: right;
+  margin-right: 7%;
+}
+
+.detailprice{
+  color: rgb(236, 43, 43);
+}
+
+.floatleft{
+  float: left;
+  margin-left: 5%;
+  text-align: left;
+   /* border-bottom: 1px solid goldenrod; */
+  /* border-radius: 10px;  */
+  padding: 15px 8px 0px 8px;
+  position: absolute;
+  bottom: 4px;
+}
+.quality{
+  color: rgb(230, 213, 122);
+  font-size: 30px;
+  font-weight: lighter;
+  font-weight: bold;
+}
+.purchase{
+  color: rgb(226, 226, 226);
+  font-size: 30px;
+  font-weight: lighter;
+  border-bottom: 1px solid  rgb(243, 80, 31);
+  
+}
+.purchase .be{
+  color: rgb(243, 80, 31);
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.purchase .happy{
+  color: rgb(228, 228, 228);
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+
+.footerr{
+  background-color: #ffb246;
+  padding: 100px;
+  padding-left: 900px;
+ 
 }
